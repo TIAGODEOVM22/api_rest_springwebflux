@@ -5,6 +5,7 @@ import com.tiago.webflux.document.Playlist;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+
 public interface PlaylistService {
 	
 	/*Não retorna lista sim um tipo FLUX, varios elementos*/

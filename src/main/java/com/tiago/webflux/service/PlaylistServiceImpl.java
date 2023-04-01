@@ -1,6 +1,7 @@
 package com.tiago.webflux.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.tiago.webflux.document.Playlist;
 import com.tiago.webflux.repository.PlaylistRepository;
@@ -8,6 +9,7 @@ import com.tiago.webflux.repository.PlaylistRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@Service
 public class PlaylistServiceImpl implements PlaylistService {
 
 	@Autowired
