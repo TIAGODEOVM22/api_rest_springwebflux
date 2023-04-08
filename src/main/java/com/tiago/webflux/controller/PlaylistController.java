@@ -18,21 +18,20 @@ public class PlaylistController {
 
 	@Autowired
 	public PlaylistService playlistService;
-	
+
 	@GetMapping(value = "/playlist")
-	public Flux<Playlist> getPlaylist (){
+	public Flux<Playlist> getPlaylist() {
 		return playlistService.findAll();
 	}
-	
+
 	@GetMapping(value = "/playlist/{id}")
-	public Mono<Playlist> getPlaylistId(@PathVariable String id){
+	public Mono<Playlist> getPlaylistId(@PathVariable String id) {
 		return playlistService.findById(id);
 	}
-	
+
 	@PostMapping(value = "/playlist")
-	public Mono<Playlist> save (@RequestBody Playlist playlist){
+	public Mono<Playlist> save(@RequestBody Playlist playlist) {
 		return playlistService.save(playlist);
 	}
-	
-	
+
 }
